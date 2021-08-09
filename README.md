@@ -18,8 +18,12 @@
     - *Call back to the <App/> component via function sent down through a prop so that the app can begin the process*
 - *The <Results/> component should show mock API results*
 
-## link
-[https://codesandbox.io/s/relaxed-ramanujan-z9czv?file=/src/index.js](https://codesandbox.io/s/relaxed-ramanujan-z9czv?file=/src/index.js)
+## links
+**link sandbox**  [https://codesandbox.io/s/sad-northcutt-22szr](https://codesandbox.io/s/sad-northcutt-22szr)
+
+**link actions**   [https://github.com/amroalbarham/resty/actions](https://github.com/amroalbarham/resty/actions)
+
+**link netlify**  [https://app.netlify.com/sites/practical-fermat-1dc945/overview](https://app.netlify.com/sites/practical-fermat-1dc945/overview)
 ## UML
 
 ![UML](./lab26.png)
