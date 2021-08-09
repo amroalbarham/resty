@@ -10,18 +10,18 @@ body {
   background: $backgroundColor;
   height: 100%;
 
-  #root {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-
-  // footer {
-  //   background: darken($backgroundColor, 50);
-  //   border-top: 1px solid #eee;
-  //   padding: 1em 3em;
-  //   margin: 0;
+  // #root {
+  //   display: flex;
+  //   flex-direction: column;
+  //   height: 100%;
   // }
+
+  footer {
+    background: darken($backgroundColor, 50);
+    border-top: 1px solid #eee;
+    padding: 1em 3em;
+    margin: 0;
+  }
 
   // header {
   //   background: darken($backgroundColor, 75);
