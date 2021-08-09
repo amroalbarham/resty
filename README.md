@@ -23,7 +23,7 @@
 
 **link actions**   [https://github.com/amroalbarham/resty/actions](https://github.com/amroalbarham/resty/actions)
 
-**link netlify**  [https://app.netlify.com/sites/practical-fermat-1dc945/overview](https://app.netlify.com/sites/practical-fermat-1dc945/overview)
+**link netlify**  [https://practical-fermat-1dc945.netlify.app/](https://practical-fermat-1dc945.netlify.app/)
 ## UML
 
 ![UML](./lab26.png)
