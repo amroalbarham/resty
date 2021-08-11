@@ -80,10 +80,11 @@ function Form(props) {
           <button type="submit" data-testid="submitButton">GO!</button>
         </label>
         <label className="methods">
-          <span id="get" onClick={setMethod}>GET</span>
-          <span id="post" onClick={showPost}>POST</span>
-          <span id="put" onClick={showPost}>PUT</span>
-          <span id="delete" onClick={setMethod}>DELETE</span>
+        <button id="hide" type="button"></button>
+          <button id="get" onClick={setMethod}>GET</button>
+          <button id="post" onClick={showPost}>POST</button>
+          <button id="put" onClick={showPost}>PUT</button>
+          <button id="delete" onClick={setMethod}>DELETE</button>
         </label>
         {showPostText && <textarea rows='15' cols='30' onChange={handlerRequesrBody} />}
         {/* {showPutText && <textarea name='put' rows='15' cols='30' />} */}
@@ -93,4 +94,8 @@ function Form(props) {
 }
 
 export default Form
+
+
+
+
 
