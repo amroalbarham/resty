@@ -46,14 +46,14 @@ function Form(props) {
   // const [showPutText, setshowPutText] = useState(false);
   let [method, setmethod] = useState('get');
   let [url, seturl] = useState('https://pokeapi.co/api/v2/pokemon');
-  let [requestbody, setrequestbody] = useState('https://pokeapi.co/api/v2/pokemon');
+  let [requestBody, setrequestBody] = useState();
   function handleSubmit(e) {
     e.preventDefault();
     const formData = {
       method: method,
       url: url,
     };
-    props.handleApiCall(formData);
+    props.handleApiCall(formData, requestBody);
   }
   function showPost(e) {
     setsshowPostText(!showPostText);
@@ -69,7 +69,7 @@ function Form(props) {
     seturl(e.target.value);
   }
   function handlerRequesrBody(e) {
-    setrequestbody(e.target.value)
+    setrequestBody(e.target.value)
   }
   return (
     <>
@@ -80,7 +80,7 @@ function Form(props) {
           <button type="submit" data-testid="submitButton">GO!</button>
         </label>
         <label className="methods">
-        <button id="hide" type="button"></button>
+          <button id="hide" type="button"></button>
           <button id="get" onClick={setMethod}>GET</button>
           <button id="post" onClick={showPost}>POST</button>
           <button id="put" onClick={showPost}>PUT</button>
