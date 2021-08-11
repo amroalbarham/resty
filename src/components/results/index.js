@@ -1,9 +1,9 @@
 
 // class Results extends React.Component {
-  //   render() {
-    //     return (
-      //       <section>
-      //         <pre>{this.props.data ? JSON.stringify(this.props.data, undefined, 2) : null}</pre>
+//   render() {
+//     return (
+//       <section>
+//         <pre>{this.props.data ? JSON.stringify(this.props.data, undefined, 2) : null}</pre>
 //       </section>
 //     );
 //   }
@@ -20,7 +20,7 @@ import 'react-json-pretty/themes/monikai.css';
 function Results(props) {
   return (
     <section>
-     { props.data ?<JSONPretty data-testid="results"data={props.data}></JSONPretty>  :  <Loading/>}
+      {props.data ? <><h2>Headers</h2><JSONPretty  data={props.data.headers}></JSONPretty><h2>Result</h2><JSONPretty data-testid="results" data={props.data.results}></JSONPretty></> : <Loading />}
     </section>
   );
 }

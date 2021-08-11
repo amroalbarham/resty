@@ -1,12 +1,19 @@
+import {render, screen} from '@testing-library/react';
+import Result from '../results/index';
+import '@testing-library/jest-dom/extend-expect';
 
-import { fireEvent, render, screen, waitFor } from '@testing-library/react';
-
-import Form from '../form/index';
-
-it('need to run a function on button click', async () => {
-  let callApi = jest.fn();
-  render(<Form handleApiCall={callApi} />);
-  const button = screen.getByTestId('submitButton');
-  fireEvent.click(button);
-  await waitFor(() => expect(callApi).toHaveBeenCalled());
+it('Should render results', () => {
+    const data = {
+        Headers:{
+        'content-type': 'string application/json',
+        },
+        count: 2,
+        results: [
+            {name: 'fake thing 1', url: 'http://fakethings.com/1'},
+            {name: 'fake thing 2', url: 'http://fakethings.com/2'},
+        ],
+    };
+    render(<Result data={data} />);
+    const items = screen.getByTestId('results');
+    expect(items).toHaveTextContent('[ { "name": "fake thing 1", "url": "http://fakethings.com/1" }, { "name": "fake thing 2", "url": "http://fakethings.com/2" } ]');
 });
